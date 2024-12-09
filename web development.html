@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Web Development</title>
+    <link rel="stylesheet" href="Major1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Web Development</h1>
+        <a href="Majors.html">Back</a>
+    </header>
+    <main> 
+        <div class="top">
+        <div class="wrapper">
+            <img src="img/web development.jpg" alt="cybersecurity picture" height="168" width="250">
+            <div class="text-box">
+            <h2>What is a Web Development Major?</h2>
+            <p>We all use the internet, but do you understand the ins and outs of it? There’s so much that goes into the creation and maintenance of your favorite websites, and web developers are behind it all.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="inf">
+        <div class="Answer">
+            <h2>What is Web Development Major?</h2>
+            <p>Web development involves the building and maintenance of websites. The web development process can include web design, web content development, network security, coding and more.</p>
+        </div>
+        <div class="Courses">
+            <h2>What courses are required for the Web Development degree?</h2>
+            <p>A bachelor's in web development teaches students to build aesthetically pleasing, interactive websites. Full-time students can usually graduate with a bachelor's degree in four years.
+                Typical web developer degree courses include:</p>
+            <ul>
+                <li>Principles of Programming</li>
+                <li>Database Management Systems</li>
+                <li>Website and E-commerce Strategeies</li>
+                <li>Advanced Web Markup</li>
+                <li>Scripting</li>
+            </ul>
+        </div>
+        <div class="benefits">
+            <h2>Benefits of Web Development Major</h2>
+            <p class="p1">A degree in Web Development allows graduates to qualify for careers in various roles</p>
+            <h3>The Potential for Remote Work</h3>
+            <p>Web developers enjoy a wealth of benefits,These professionals enjoy competitive salaries as well, earning a median annual wage.</p>
+            <h3>Various Niches to Choose From</h3>
+            <p>The ability to choose from various niches is another benefit of working in web development. For example, you can specialize in front end web development, back end web development, full stack web development, JavaScript development, Python development, or Java development, just to name a few. You can also work in practically any industry, including healthcare, education, travel, transportation, manufacturing, finance, or marketing.</p>
+            <h3>Low Barrier to Entry</h3>
+            <p>A job in web development is also a great choice because the barrier to entry is relatively low. You don’t need a university degree to become a Web Developer; you can learn the necessary skills by completing a bootcamp, taking classes at a training school, or studying independently. While some employers may require a degree, the vast majority just want to see that you’re capable of doing the job.</p>
+            <h3>The Oppotunity to Freelance</h3>
+            <p>Web Developers can also use their coding skills as a freelancer. Freelancing doesn’t work for every career path, but it’s a perfect fit for web development. By offering your services as a freelancer, you can earn extra money outside your regular job. You could even work independently and be your own boss if that’s what you’d prefer.</p>
+
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-column">
+            <p>Quick Links</p>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Majors.html">Majors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">Our Team</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Contact</p>
+            <ul>
+                <li>Kilometer 6, 278H, Street 201R, Kroalkor Village Unnamed Road, Phnom Penh</li>
+                <li>Mobile: 016 666 666</li>
+                <li>Email: itexpressg10@gmail.com</li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Gallery</p>
+            <div class="gallery-images">
+                <img src="img/1.jpg" alt="Image 1">
+                <img src="img/2.jpg" alt="Image 2">
+                <img src="img/3.jpg" alt="Image 3">
+                <img src="img/4.jpg" alt="Image 4">
+                <img src="img/5.jpg" alt="Image 5">
+                <img src="img/6.jpg" alt="Image 6">
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <button id="scroll-up">⬆</button>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+          toggleArrows();
+    
+          $(window).on('scroll', function() {
+            toggleArrows();
+          })
+        });
+        $('#scroll-up').on('click', function() {
+              $('html, body').animate({ scrollTop: 0 }, 'slow');
+          });
+                
+        function toggleArrows() {
+          const scrollTop = $(window).scrollTop();
+          const scrollHeight = $(document).height();
+          const windowHeight = $(window).height();
+    
+          if (scrollTop > 50) {
+            $('#scroll-up').fadeIn();
+          }else{
+            $('#scroll-up').fadeOut();
+          }
+        }
+      </script>
+</body>
+</html>

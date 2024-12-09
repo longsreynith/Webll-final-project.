@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Software Engineering</title>
+    <link rel="stylesheet" href="Major1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Software Engineering</h1>
+        <a href="Majors.html">Back</a>
+    </header>
+    <main> 
+        <div class="top">
+        <div class="wrapper">
+            <img src="img/software engineering.jpg" alt="cybersecurity picture" height="168" width="250">
+            <div class="text-box">
+            <h2>What is a Software Engineering Major?</h2>
+            <p>The demand for capable software engineers continues to rise as businesses become more dependent on technology.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="inf">
+        <div class="Answer">
+            <h2>What is Software Engineering?</h2>
+            <p>As a specialized computer science subfield, software engineering uses engineering principles to design, develop, test, and analyze computer software. Software engineering programs differ from other computer science degrees by combining engineering and computer science concepts.</p>
+        </div>
+        <div class="Courses">
+            <h2>What courses are required for a software engineering degree?</h2>
+            <p>Software Engineering Courses:</p>
+            <ul>
+                <li>Introduction to Computing</li>
+                <li>Fundamentals of Programming</li>
+                <li>Data Structures</li>
+                <li>Designs and Analysis of Algorithms</li>
+                <li>Theory of Programming Languages</li>
+                <li>Operating Systems</li>
+                <li>Visual Analytics</li>
+                <li>Database Management Systems</li>
+                <li>Linear Algebra for Engineering</li>
+                <li>Data Abstraction and Implementation</li>
+                <li>Applied Statistics</li>
+                <li>Mathematical Models of Software</li>
+                <li>Human-Centered Requirements and Design</li>
+                <li>Engineering and Magnetism</li>
+                <li>Methods of Software Engineering</li>
+            </ul>
+        </div>
+        <div class="benefits">
+            <h2>Major Software Engineer Benefits</h2>
+            <p class="p1">Software engineering jobs have been getting more and more famous, and a career in this field is now a great option for many people. Have a look at the top benefits of choosing software development as a career path.</p>
+            <h3>High Demand</h3>
+            <p>Software engineers are highly demanded nowadays. Practically, every industry requires their own kind of software and engineers who can develop software according to their requirements. As in the 21st century this planet is getting digital and operated online, the need for software engineers is rising and will continue to rise. If you are looking for a career that has a future scope, software engineering is a great choice.</p>
+            <h3>Career Options</h3>
+            <p>When you choose software engineering as a career, there are many more options available for you. Such as, you can decide if you want to work as an independent developer or with a large company. Having this option lets you choose a lifestyle and work environment according to your requirements as well.</p>
+            <h3>High Salary</h3>
+            <p>Salary is one of the main reasons why people choose this career.The salary can even increase if you’re developing your own software and have a great reputation in the industry.</p>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-column">
+            <p>Quick Links</p>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Majors.html">Majors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">Our Team</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Contact</p>
+            <ul>
+                <li>Kilometer 6, 278H, Street 201R, Kroalkor Village Unnamed Road, Phnom Penh</li>
+                <li>Mobile: 016 666 666</li>
+                <li>Email: itexpressg10@gmail.com</li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Gallery</p>
+            <div class="gallery-images">
+                <img src="img/1.jpg" alt="Image 1">
+                <img src="img/2.jpg" alt="Image 2">
+                <img src="img/3.jpg" alt="Image 3">
+                <img src="img/4.jpg" alt="Image 4">
+                <img src="img/5.jpg" alt="Image 5">
+                <img src="img/6.jpg" alt="Image 6">
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <button id="scroll-up">⬆</button>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+          toggleArrows();
+    
+          $(window).on('scroll', function() {
+            toggleArrows();
+          })
+        });
+        $('#scroll-up').on('click', function() {
+              $('html, body').animate({ scrollTop: 0 }, 'slow');
+          });
+                
+        function toggleArrows() {
+          const scrollTop = $(window).scrollTop();
+          const scrollHeight = $(document).height();
+          const windowHeight = $(window).height();
+    
+          if (scrollTop > 50) {
+            $('#scroll-up').fadeIn();
+          }else{
+            $('#scroll-up').fadeOut();
+          }
+        }
+      </script>
+</body>
+</html>

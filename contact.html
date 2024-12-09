@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Web 2 Project</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="Home.html" class="logo">IT-Express</a>
+
+        <nav class="nav-bar">
+            <a href="Home.html">Home</a>
+            <a href="Majors.html">Majors</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="aboutus.html">Our Team</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content-wrapper">
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.1030152253784!2d104.89837077547323!3d11.61600534314601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095177ee61fd7d%3A0xa66cfdf83a58b2ae!2sAmerican%20University%20of%20Phnom%20Penh!5e0!3m2!1sen!2skh!4v1701181853640!5m2!1sen!2skh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
+
+            <section class="contact-form">
+                <h2>Contact Us</h2>
+                <p>Feel free to contact us for any query.</p>
+
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <input type="submit" value="Send Message" id="submit-button">
+                    <p id="form-feedback" style="display: none;"></p>
+                </form>
+            </section>
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+
+                <div class="office-info">
+                    <h3>Office Location:</h3>
+                    <p>Kilometer 6, 278H, Street 201R, Kroalkor Village<br>
+                        , Phnom Penh</p>
+                </div>
+
+                <div class="contact-details">
+                    <h3>Contact Details:</h3>
+                    <p>Mobile: 016 666 666</p>
+                    <p>Email: itexpressg10@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <button id="scroll-up" class="scroll-arrow">⬆</button>
+    <button id="nav-left" class="nav-arrow" onclick="location.href='Majors.html';">〈</button>
+    <button id="nav-right" class="nav-arrow" onclick="location.href='aboutus.html';">〉</button>
+    <footer class="footer">
+        <div class="footer-column">
+            <p>Quick Links</p>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Majors.html">Majors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">Our Team</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <p>Contact</p>
+            <ul>
+                <li>Kilometer 6, 278H, Street 201R, Kroalkor Village Unnamed Road, Phnom Penh</li>
+                <li>Mobile: 016 666 666</li>
+                <li>Email: itexpressg10@gmail.com</li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Gallery</p>
+            <div class="gallery-images">
+                <img src="img/1.jpg" alt="Image 1">
+                <img src="img/2.jpg" alt="Image 2">
+                <img src="img/3.jpg" alt="Image 3">
+                <img src="img/4.jpg" alt="Image 4">
+                <img src="img/5.jpg" alt="Image 5">
+                <img src="img/6.jpg" alt="Image 6">
+            </div>
+        </div>
+    </footer>
+    <script>
+    $(document).ready(function (){
+        $('#contact-form').on('submit', function(event) {
+            event.preventDefault();
+
+            $.ajax({
+                url: 'submit_form.php',
+                method: 'POST',
+                data: $(this).serialize(),
+                success: function (response) {
+                    if (response.trim() === "success") {
+                        $('#form-feedback')
+                        .text('Message sent successfully!')
+                        .css('color', 'green')
+                        .fadeIn()
+                        .delay(3000)
+                        .fadeOut();
+                    }else{
+                        $('#form-feedback')
+                        .text('Failed to send message. Please try again!')
+                        .css('color', 'red')
+                        .fadeIn()
+                        .delay(3000)
+                        .fadeOut();
+                    }
+                },
+                error: function (xhr, status, error) {
+                        console.error('AJAX Error:', error); 
+                        $('#form-feedback')
+                            .text('An error occurred. Please check your network or try again.')
+                            .css('color', 'red')
+                            .fadeIn()
+                            .delay(3000)
+                            .fadeOut();
+            }
+        });
+    });
+    });    
+    $(document).ready(function() {
+      toggleArrows();
+
+      $(window).on('scroll', function() {
+        toggleArrows();
+      })
+    });
+    $('#scroll-up').on('click', function() {
+          $('html, body').animate({ scrollTop: 0 }, 'slow');
+      });
+        
+    function toggleArrows() {
+      const scrollTop = $(window).scrollTop();
+      const scrollHeight = $(document).height();
+      const windowHeight = $(window).height();
+
+      if (scrollTop > 50) {
+        $('#scroll-up').fadeIn();
+      }else{
+        $('#scroll-up').fadeOut();
+      }
+    }
+    </script>
+</body>
+</html>

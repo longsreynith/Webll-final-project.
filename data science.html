@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Data Science</title>
+    <link rel="stylesheet" href="Major1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Data science</h1>
+        <a href="Majors.html">Back</a>
+    </header>
+    <main> 
+        <div class="top">
+        <div class="wrapper">
+            <img src="img/data science.jpg" height="168" width="250">
+            <div class="text-box">
+            <h2>What is Data Science Major?</h2>
+            <p>In this artical you can receive information about the benefits of our programs, the courses you'll take and understanding Data Science.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="inf">
+        <div class="Answer">
+            <h2>What is Data Science Major?</h2>
+            <p>It is a program that enables graduates to use their expertise in computer science and mathematics to tackle unstructured data, solve multifaceted problems, and make data-driven recommendations.</p>
+        </div>
+        <div class="Courses">
+            <h2>What courses are required for a data science degree?</h2>
+            <p>There are two primary components to a bachelor's in data science degree program "general courses and the specific courses", but we selected only the specific courses that are useful for you.
+                These are some courses you need to take:</p>
+            <ul>
+                <li>Data Exploration & Analysis</li>
+                <li>Probability & Statistics</li>
+                <li>Data Analytics</li>
+                <li>Database Systems</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Data Mining</li>
+                <li>Object Oriented Programming</li>
+                <li>Data Visualization</li>
+                <li>Big Data</li>
+                <li>Machine Learning</li>
+            </ul>
+        </div>
+        <div class="benefits">
+            <h2>Benefits of getting a data science degree</h2>
+            <p class="p1">The benefits that you can experience from pursuing a data science are:</p>
+            <h3>The Rise of Data</h3>
+            <p>Effectively capturing and managing data has never been more imperative for businesses. Companies spanning a diverse range of industries are relying on data to better understand their consumer and their market, and in turn inform better business decisions and processes.<br>Data can be used to find new customers, hold onto existing ones, improve marketing efforts and much more. When your choices are backed by factual stats and information, you don’t have to waste time and money on a trial-and-error approach.<br>With an overlap of knowledge and skills already under your belt, IT professionals are perfectly positioned to make the most of career opportunities associated with efficient data management by developing advanced data science skills.</p>
+            <h3>The Importance of Programming</h3>
+            <p>If you’re worried your programming skills may be going to waste in IT, they could be put to more effective use in data science. Programming languages help data scientists clean and organise unstructured sets of data, so they can be turned into valuable business insights. Data scientists need advanced programming skills to effectively manipulate data and make sense of complex metrics.Building on your existing programming skills will help you successfully transition into the data science field from IT.</p>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-column">
+            <p>Quick Links</p>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Majors.html">Majors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">Our Team</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Contact</p>
+            <ul>
+                <li>Kilometer 6, 278H, Street 201R, Kroalkor Village Unnamed Road, Phnom Penh</li>
+                <li>Mobile: 016 666 666</li>
+                <li>Email: itexpressg10@gmail.com</li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Gallery</p>
+            <div class="gallery-images">
+                <img src="img/1.jpg" alt="Image 1">
+                <img src="img/2.jpg" alt="Image 2">
+                <img src="img/3.jpg" alt="Image 3">
+                <img src="img/4.jpg" alt="Image 4">
+                <img src="img/5.jpg" alt="Image 5">
+                <img src="img/6.jpg" alt="Image 6">
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <button id="scroll-up">⬆</button>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+          toggleArrows();
+    
+          $(window).on('scroll', function() {
+            toggleArrows();
+          })
+        });
+        $('#scroll-up').on('click', function() {
+              $('html, body').animate({ scrollTop: 0 }, 'slow');
+          });
+                
+        function toggleArrows() {
+          const scrollTop = $(window).scrollTop();
+          const scrollHeight = $(document).height();
+          const windowHeight = $(window).height();
+    
+          if (scrollTop > 50) {
+            $('#scroll-up').fadeIn();
+          }else{
+            $('#scroll-up').fadeOut();
+          }
+        }
+      </script>
+</body>
+</html>

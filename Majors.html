@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Major</title>
+    <link rel="stylesheet" href="Majors.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="Design">
+        <header class="header"> 
+        <a href="Home.html" class="logo">IT-Express</a> 
+ 
+        <nav class="nav-bar"> 
+            <a href="Home.html">Home</a> 
+            <a href="Majors.html" class="active">Majors</a> 
+            <a href="contact.html">Contact</a> 
+            <a href="aboutus.html">Our Team</a> 
+        </nav> 
+        </header> 
+      <div class="main-inf">
+        <div class="title">
+            <h1 class="Major">These are the Popular Majors in IT Field</h1>
+        </div>
+
+        <main>
+        <figure>
+            <a href="cyber security.html" target="_parent"> 
+              <img src="img/cyber security.jpg" alt="Cyber Security" width="350" height="170">
+              <figcaption>Cyber Security</figcaption>
+            </a>
+        </figure>
+        <figure>
+          <a href="data science.html" target="_parent">
+            <img src="img/data science.jpg" alt="Data Science" width="350" height="170">
+            <figcaption>Data Science</figcaption>
+          </a>
+        </figure>
+          <figure>
+          <a href="software engineering.html" target="_parent"> 
+            <img src="img/software engineering.jpg" alt="Software Engineering" width="350" height="170">
+            <figcaption>Software Engineering</figcaption>
+          </a>
+        </figure>
+        <figure>
+          <a href="web development.html" target="_parent">  
+            <img src="img/web development.jpg" alt="Web Development" width="350" height="170">
+            <figcaption>Web Development</figcaption>
+          </a>
+        </figure>
+        </main>
+        <button id="scroll-up" class="scroll-arrow">⬆</button>
+        <button id="nav-left" class="nav-arrow" onclick="location.href='Home.html';">〈</button>
+        <button id="nav-right" class="nav-arrow" onclick="location.href='contact.html';">〉</button>
+        </div>
+    </div>
+  <footer class="footer">
+      <div class="footer-column">
+          <p>Quick Links</p>
+          <ul>
+              <li> <a href="Home.html">Home</a></li>
+              <li><a href="Majors.html">Majors</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="aboutus.html">Our Team</a></li>
+          </ul>
+      </div>
+  
+      <div class="footer-column">
+          <p>Contact</p>
+          <ul>
+              <li>Kilometer 6, 278H, Street 201R, Kroalkor Village Unnamed Road, Phnom Penh</li>
+              <li>Mobile: 016 666 666</li>
+              <li>Email: itexpressg10@gmail.com</li>
+          </ul>
+      </div>
+  
+      <div class="footer-column">
+          <p>Gallery</p>
+          <div class="gallery-images">
+              <img src="img/1.jpg" alt="Image 1">
+              <img src="img/2.jpg" alt="Image 2">
+              <img src="img/3.jpg" alt="Image 3">
+              <img src="img/4.jpg" alt="Image 4">
+              <img src="img/5.jpg" alt="Image 5">
+              <img src="img/6.jpg" alt="Image 6">
+          </div>
+      </div>
+  </footer>
+  <script>
+    $(document).ready(function() {
+      toggleArrows();
+
+      $(window).on('scroll', function() {
+        toggleArrows();
+      })
+    });
+    $('#scroll-up').on('click', function() {
+          $('html, body').animate({ scrollTop: 0 }, 'slow');
+      });
+            
+    function toggleArrows() {
+      const scrollTop = $(window).scrollTop();
+      const scrollHeight = $(document).height();
+      const windowHeight = $(window).height();
+
+      if (scrollTop > 50) {
+        $('#scroll-up').fadeIn();
+      }else{
+        $('#scroll-up').fadeOut();
+      }
+    }
+  </script>
+</body>
+</html>

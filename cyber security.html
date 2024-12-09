@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cybersecurity</title>
+    <link rel="stylesheet" href="Major1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Cybersecurity</h1>
+        <a href="Majors.html">Back</a>
+    </header>
+    <main> 
+        <div class="top">
+        <div class="wrapper">
+            <img src="img/cyber security.jpg" alt="cybersecurity picture" height="168" width="250">
+            <div class="text-box">
+            <h2>What is a Cybersecurity Major?</h2>
+            <p>This article, we answer the question of what is a cybersecurity major, describe some of the courses typical of these programs, and the benefits.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="inf">
+        <div class="Answer">
+            <h2>What is Cybersecurity Major?</h2>
+            <p>As a type of computer science degree, a cybersecurity program can teach you how to protect computer systems, devices, networks and databases from digital attacks. You may also learn how to monitor this technology to prevent threats before they begin. With these skills, you can help organizations minimize the chance of losing valuable information or data to hackers.</p>
+        </div>
+        <div class="Courses">
+            <h2>What courses are required for a cybersecurity degree?</h2>
+            <p>Although the specific courses offered can depend on your program type and format, some of the courses you can expect to take in cybersecurity program include those in:</p>
+            <ul>
+                <li>Programming</li>
+                <li>Computer networks</li>
+                <li>Cryptography</li>
+                <li>Threat testing</li>
+                <li>Digital forensics</li>
+                <li>Information law and ethics</li>
+                <li>Computer science</li>
+                <li>Discrete mathematics</li>
+                <li>Operating systems</li>
+                <li>System vulnerability assessment</li>
+                <li>Cybercrime investigations</li>
+                <li>Cybersecurity operations</li>
+                <li>System defense</li>
+                <li>Ethical hacking</li>
+                <li>Cybersecurity policy</li>
+            </ul>
+        </div>
+        <div class="benefits">
+            <h2>Benefits of getting a cybersecurity degree</h2>
+            <p class="p1">The benefits that you can experience from pursuing a cybersecurity are:</p>
+            <h3>Skill development</h3>
+            <p>One benefit you can experience from your degree program is the development of skills and training opportunities that can help you advance your career.</p>
+            <h3>Professional connections</h3>
+            <p>Another benefit of pursuing a degree in cyber security is that it can allow you to develop relationships with your classmates, professors and mentors. As you complete your coursework and demonstrate your skills, you can create a professional network. Once you graduate and begin searching for a career, this network can help you locate positions and opportunities that may match your skills and preferences.</p>
+            <h3>Meaningful work</h3>
+            <p>Another benefit of pursuing a degree in cybersecurity is that it can allow you to begin a meaningful, crucial career after graduation. Since many organizations use digital data within daily operations, a cybersecurity professional can help businesses protect important operational assets. Without proper protection, companies can experience cyber hacking attacks that greatly delay or pause operations. If you'd like to begin a role that allows you to protect large and small organizations from challenging threats, cybersecurity may be a fulfilling career.</p>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-column">
+            <p>Quick Links</p>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Majors.html">Majors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">Our Team</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Contact</p>
+            <ul>
+                <li>Kilometer 6, 278H, Street 201R, Kroalkor Village Unnamed Road, Phnom Penh</li>
+                <li>Mobile: 016 666 666</li>
+                <li>Email: itexpressg10@gmail.com</li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Gallery</p>
+            <div class="gallery-images">
+                <img src="img/1.jpg" alt="Image 1">
+                <img src="img/2.jpg" alt="Image 2">
+                <img src="img/3.jpg" alt="Image 3">
+                <img src="img/4.jpg" alt="Image 4">
+                <img src="img/5.jpg" alt="Image 5">
+                <img src="img/6.jpg" alt="Image 6">
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <button id="scroll-up">⬆</button>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+          toggleArrows();
+    
+          $(window).on('scroll', function() {
+            toggleArrows();
+          })
+        });
+        $('#scroll-up').on('click', function() {
+              $('html, body').animate({ scrollTop: 0 }, 'slow');
+          });
+                
+        function toggleArrows() {
+          const scrollTop = $(window).scrollTop();
+          const scrollHeight = $(document).height();
+          const windowHeight = $(window).height();
+    
+          if (scrollTop > 50) {
+            $('#scroll-up').fadeIn();
+          }else{
+            $('#scroll-up').fadeOut();
+          }
+        }
+      </script>
+</body>
+</html>
